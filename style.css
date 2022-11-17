@@ -1,0 +1,71 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-size: 16px;
+	line-height: 1.5;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	height: 100px;
+}
+main {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	height: 100%;
+	width: 100%;
+}
+.options {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	border: 1px solid salmon;
+}
+.options > div {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.inputs,
+.outputs {
+	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0px 10px;
+}
+
+.Box {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	height: 50px;
+	width: 100%;
+	margin-top: 10px;
+
+	border: 2px solid red;
+}
+.input2 {
+	width: 100%;
+	height: 100%;
+	font-size: 15px;
+}
+.Text {
+	font-size: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+.Generate {
+	font-size: 40px;
+}
