@@ -28,6 +28,6 @@ function output() {
 		let baseUrl = url.value;
 		const text = document.querySelector('.firstText');
 		let textBefore = text.value;
-		box.innerText = `${textBefore} ${baseUrl}/${lastText}`;
+		box.innerText = `${textBefore} ${baseUrl} ${lastText}`;
 	});
 }
