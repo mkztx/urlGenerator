@@ -1,13 +1,14 @@
 const inputs = document.querySelector('.inputs');
 const outputs = document.querySelector('.outputs');
 
-let numberOfInputs = 15;
+let numberOfInputs = 30;
 function createInputs(number) {
 	for (let i = 0; i < numberOfInputs; i++) {
 		const inputBox = document.createElement('div');
 		inputBox.classList.add('Box');
 		const input = document.createElement('input');
 		input.classList.add('input2', `i${i}`);
+		input.setAttribute('Value', 'last Text');
 		inputBox.appendChild(input);
 		inputs.appendChild(inputBox);
 		const outputBox = document.createElement('div');
