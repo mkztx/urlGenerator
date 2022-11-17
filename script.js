@@ -17,7 +17,7 @@ function createInputs(number) {
 		outputs.appendChild(outputBox);
 	}
 }
-
+const arrayOfOutput = [];
 createInputs(numberOfInputs);
 function output() {
 	const outputBox = document.querySelectorAll('.Text');
@@ -29,5 +29,10 @@ function output() {
 		const text = document.querySelector('.firstText');
 		let textBefore = text.value;
 		box.innerText = `${textBefore} ${baseUrl} ${lastText}`;
+		arrayOfOutput.push(`${textBefore} ${baseUrl} ${lastText}`);
 	});
+}
+function copy() {
+	let outputText = arrayOfOutput.join('\n');
+	window.alert(outputText);
 }

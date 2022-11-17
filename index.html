@@ -8,7 +8,7 @@
 		<script src="./script.js" defer></script>
 		<link rel="stylesheet" href="style.css" />
 	</head>
-	<body>
+	
 		<header>
 			<h1>Url Generator</h1>
 			<p>Created by Mzktx on GitHub</p>
@@ -23,9 +23,12 @@
 				<input type="text" class="firstText" value="Text before url" />
 			</div>
 		</div>
+		<div class="buttons">
 		<button id="Generate" class="Generate" onclick="output()">
 			GENERATE
 		</button>
+        <button id="Copy" class="Copy" onclick="copy()">Copy</button>
+        </div>
 		<main>
 			<div class="inputs"></div>
 			<div class="outputs"></div>
