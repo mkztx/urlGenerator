@@ -9,6 +9,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+	color: #fff;
+	background-color: #000;
 }
 header {
 	display: flex;
@@ -27,7 +29,6 @@ main {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
-	border: 1px solid salmon;
 }
 .options > div {
 	display: flex;
@@ -36,7 +37,6 @@ main {
 }
 .inputs,
 .outputs {
-	border: 1px solid black;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -52,8 +52,6 @@ main {
 	height: 50px;
 	width: 100%;
 	margin-top: 10px;
-
-	border: 2px solid red;
 }
 .input2 {
 	width: 100%;
@@ -81,4 +79,33 @@ main {
 	width: 100%;
 	font-size: 40px;
 	height: 50px;
+}
+
+.modes {
+	width: 100%;
+	height: 50px;
+	display: flex;
+	flex-direction: row;
+}
+
+.modes > div {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+}
+.modes > div > button {
+	height: 100%;
+	width: 100%;
+}
+.massInputBox {
+	display: flex;
+	flex-direction: column;
+	height: fit-content;
+	font-size: 20px;
+}
+.massInputBox > textarea {
+	min-height: 200px;
+	height: fit-content;
 }
