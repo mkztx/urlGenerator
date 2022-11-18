@@ -86,3 +86,8 @@ function massMode() {
 	inputBox.classList.add('massInputBox');
 	inputs.appendChild(inputBox);
 }
+
+function closing() {
+	const instruction = document.querySelector('.instruction');
+	instruction.style.display = 'none';
+}

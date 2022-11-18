@@ -9,9 +9,9 @@
 		<link rel="stylesheet" href="style.css" />
 		<style>
 			@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;600&display=swap');
-			</style> 
+		</style>
 	</head>
-	
+	<body>
 		<header>
 			<h1>Url Generator</h1>
 			<p>Created by Mzktx on GitHub</p>
@@ -29,21 +29,64 @@
 		<div class="modes">
 			<div class="singularMode">
 				<p>How many rows</p>
-				<input type="text" value="15" class="numberOfInputs">
+				<input type="text" value="15" class="numberOfInputs" />
 				<button onclick="createSingleMode()">Single Mode</button>
 			</div>
-			<div class="massMode"><button class="massMode" onclick="massMode()">Mass Mode</button></div>
+			<div class="massMode">
+				<button class="massMode" onclick="massMode()">Mass Mode</button>
+			</div>
 		</div>
 		<div class="buttons">
-		<button id="Generate" class="Generate" onclick="output()">
-			GENERATE
-		</button>
-        <button id="Copy" class="Copy" onclick="copy()">Copy</button>
-        </div>
+			<button id="Generate" class="Generate" onclick="output()">
+				GENERATE
+			</button>
+			<button id="Copy" class="Copy" onclick="copy()">Copy</button>
+		</div>
 		<main>
 			<div class="inputs"></div>
 			<div class="outputs"></div>
 		</main>
-		<footer></footer>
+		<div class="instruction">
+			<div class="instructionBox">
+				<div class="instructionText">
+					<h1>Url Generator</h1>
+					<p>
+						firstly input url you want to use in box Base/Your Url
+					</p>
+					<p>
+						Later you can add text which you want to add before your
+						url
+					</p>
+					<p>
+						To do so, simply enter this text in "text before url"
+						box
+					</p>
+					<p>Generator have 2 modes:</p>
+					<p>Single and Mass mode</p>
+					<p>
+						to use "single mode" enter how many rows you want to
+						generate and press single mode
+					</p>
+					<p>
+						in single mode you have to enter every last text
+						separately
+					</p>
+					<p>To use Mass Mode you have to press "Mass Mode" button</p>
+					<p>
+						In Mass Mode you can paste all your last texts in input
+						box, texts are separated by enter, "." or ","
+					</p>
+					<p>
+						After input of your texts in both modes, you have to
+						press generate to generate all urls
+					</p>
+					<p>
+						you can copy one by one, or press "Copy" button to
+						display all urls in one text in lines
+					</p>
+				</div>
+				<button onclick="closing()" class="close">Close</button>
+			</div>
+		</div>
 	</body>
 </html>
