@@ -91,3 +91,7 @@ function closing() {
 	const instruction = document.querySelector('.instruction');
 	instruction.style.display = 'none';
 }
+function showInfo() {
+	const instruction = document.querySelector('.instruction');
+	instruction.style.display = 'flex';
+}

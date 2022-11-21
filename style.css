@@ -139,7 +139,7 @@ main {
 .instructionBox {
 	display: flex;
 	flex-direction: column;
-	gap: 15px;
+	gap: 10px;
 	width: 80%;
 	background-color: rgb(229, 229, 229);
 	padding: 20px;
@@ -166,8 +166,7 @@ main {
 	gap: 10px;
 	color: #000;
 }
-.buttons button,
-.modes button {
+button {
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
@@ -176,8 +175,7 @@ main {
 		10px 10px 12px rgba(176, 176, 176, 0.16);
 	background-color: #fff;
 }
-.buttons button:hover,
-.modes button:hover {
+button:hover {
 	box-shadow: -7px -7px 10px rgba(255, 255, 255, 0.64),
 		10px 10px 12px rgba(176, 176, 176, 0.16) inset;
 }
