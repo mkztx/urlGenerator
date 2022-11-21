@@ -77,18 +77,21 @@ function createSingleMode() {
 	createInputs(number.value);
 }
 function massMode() {
-	mode = 'massMode';
-	//creating input box
-	const inputBox = document.createElement('div');
-	const input = document.createElement('textarea');
-	const instruction = document.createElement('p');
-	instruction.innerText = 'Insert all of yours last texts';
-	inputBox.appendChild(instruction);
-	input.classList.add('massInput');
-	input.setAttribute('type', 'text');
-	inputBox.appendChild(input);
-	inputBox.classList.add('massInputBox');
-	inputs.appendChild(inputBox);
+	if (created == 0) {
+		created = 1;
+		mode = 'massMode';
+		//creating input box
+		const inputBox = document.createElement('div');
+		const input = document.createElement('textarea');
+		const instruction = document.createElement('p');
+		instruction.innerText = 'Insert all of yours last texts';
+		inputBox.appendChild(instruction);
+		input.classList.add('massInput');
+		input.setAttribute('type', 'text');
+		inputBox.appendChild(input);
+		inputBox.classList.add('massInputBox');
+		inputs.appendChild(inputBox);
+	}
 }
 
 function closing() {
