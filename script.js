@@ -3,19 +3,23 @@ const outputs = document.querySelector('.outputs');
 let mode = '';
 
 let numberOfInputs = 30;
+let created = 0;
 function createInputs(number) {
-	for (let i = 0; i < number; i++) {
-		const inputBox = document.createElement('div');
-		inputBox.classList.add('Box');
-		const input = document.createElement('input');
-		input.classList.add('input2', `i${i}`);
-		input.setAttribute('Value', 'last Text');
-		inputBox.appendChild(input);
-		inputs.appendChild(inputBox);
-		const outputBox = document.createElement('div');
-		outputBox.classList.add('Box', 'Text', `${i}`);
-		outputBox.innerText = 'Text';
-		outputs.appendChild(outputBox);
+	if (created == 0) {
+		created = 1;
+		for (let i = 0; i < number; i++) {
+			const inputBox = document.createElement('div');
+			inputBox.classList.add('Box');
+			const input = document.createElement('input');
+			input.classList.add('input2', `i${i}`);
+			input.setAttribute('Value', 'last Text');
+			inputBox.appendChild(input);
+			inputs.appendChild(inputBox);
+			const outputBox = document.createElement('div');
+			outputBox.classList.add('Box', 'Text', `${i}`);
+			outputBox.innerText = 'Text';
+			outputs.appendChild(outputBox);
+		}
 	}
 }
 const arrayOfOutput = [];
