@@ -30,8 +30,8 @@ function output() {
 			let baseUrl = url.value;
 			const text = document.querySelector('.firstText');
 			let textBefore = text.value;
-			box.innerText = `${textBefore} ${baseUrl} ${lastText}`;
-			arrayOfOutput.push(`${textBefore} ${baseUrl} ${lastText}`);
+			box.innerText = `${textBefore} ${lastText} ${baseUrl}`;
+			arrayOfOutput.push(`${textBefore} ${lastText} ${baseUrl}`);
 		});
 	} else if (mode == 'massMode') {
 		//creating output box
@@ -50,7 +50,7 @@ function output() {
 			const text = document.querySelector('.firstText');
 			let textBefore = text.value;
 			let lastText = output[x];
-			arrayOfOutput.push(`${textBefore} ${baseUrl} ${lastText}`);
+			arrayOfOutput.push(`${textBefore} ${lastText} ${baseUrl}`);
 		}
 		let convertedOutput = arrayOfOutput.join('\n');
 		outputText.innerText = `${convertedOutput}`;
