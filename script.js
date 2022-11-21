@@ -4,6 +4,7 @@ let mode = '';
 
 let numberOfInputs = 30;
 let created = 0;
+let createdOutputs = 0;
 function createInputs(number) {
 	if (created == 0) {
 		created = 1;
@@ -38,16 +39,17 @@ function output() {
 			arrayOfOutput.push(`${textBefore} ${lastText} ${baseUrl}`);
 		});
 	} else if (mode == 'massMode') {
+		if (createdOutputs == 1) {
+			reset();
+		} else {
+			createdOutputs = 1;
+		}
+		arrayOfOutput.splice(0, arrayOfOutput.length);
 		//creating output box
 		const outputBox = document.createElement('div');
 		const outputText = document.createElement('p');
 		const massTextValue = document.querySelector('.massInput').value;
-		let output = massTextValue
-			.split('\n')
-			.join(',')
-			.split('.')
-			.join(',')
-			.split(',');
+		let output = massTextValue.split('\n').join(',').split(',');
 		for (x in output) {
 			const url = document.querySelector('.baseUrl');
 			let baseUrl = url.value;
@@ -58,6 +60,7 @@ function output() {
 		}
 		let convertedOutput = arrayOfOutput.join('\n');
 		outputText.innerText = `${convertedOutput}`;
+		outputBox.classList.add('newOutputs');
 		outputBox.appendChild(outputText);
 		outputs.appendChild(outputBox);
 	}
@@ -101,4 +104,8 @@ function closing() {
 function showInfo() {
 	const instruction = document.querySelector('.instruction');
 	instruction.style.display = 'flex';
+}
+function reset() {
+	const prevOutputs = document.querySelector('.newOutputs');
+	outputs.removeChild(outputs.querySelector(`.${prevOutputs.classList[0]}`));
 }
